@@ -127,7 +127,8 @@ save_raw_16bit(depth, fpath)
 # Colorize output
 from zoedepth.utils.misc import colorize
 
-colored = colorize(depth)
+# Use cmap="magma_r" for a linear color map, cmap="turbo_r" for a high contrast disparity color map
+colored = colorize(depth, cmap="magma_r")
 
 # save colored output
 fpath_colored = "/path/to/output_colored.png"
